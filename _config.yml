@@ -8,3 +8,4 @@ github_username: ahofmeister
 
 # Build settings
 markdown: kramdown
+theme: jekyll-theme-midnight

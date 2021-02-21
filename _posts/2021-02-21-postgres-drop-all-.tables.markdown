@@ -1,5 +1,5 @@
 ---
-layout: post 
+layout: default
 title:  "Drop all tables in a PostgreSQL schema"
 date:   21-02-21 13:24:59 +0100
 categories: coding
