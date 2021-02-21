@@ -6,9 +6,52 @@
 </description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 Feb 2021 21:08:04 +0100</pubDate>
-    <lastBuildDate>Sun, 21 Feb 2021 21:08:04 +0100</lastBuildDate>
+    <pubDate>Sun, 21 Feb 2021 21:25:15 +0100</pubDate>
+    <lastBuildDate>Sun, 21 Feb 2021 21:25:15 +0100</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Switch theme in Jekyll</title>
+        <description>&lt;p&gt;Switching a theme in Jekyll is straight forward.&lt;/p&gt;
+
+&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add the theme to the Gemfile
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;jekyll-theme-midnight&quot;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Execute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Set the theme in the &lt;em&gt;_config.yml&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;theme: jekyll-theme-midnight&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Execute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;troubleshooting&quot;&gt;Troubleshooting&lt;/h2&gt;
+
+&lt;h4 id=&quot;theme-not-displayed&quot;&gt;Theme not displayed&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make sure, to remove the &lt;em&gt;default.html&lt;/em&gt; in the &lt;em&gt;_layouts&lt;/em&gt; folder. The file overrides the default layout from the
+installed theme.&lt;/li&gt;
+  &lt;li&gt;Set the layout of your posts/pages according to your installed theme. For instance, the &lt;em&gt;midnight&lt;/em&gt; theme does not have
+any post or page layout per default.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 21 Feb 2021 13:24:59 +0100</pubDate>
+        <link>http://localhost:4000/blog/coding/2021/02/21/switch-theme-in-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/coding/2021/02/21/switch-theme-in-jekyll.html</guid>
+        
+        <category>jekyll</category>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Drop all tables in a PostgreSQL schema</title>

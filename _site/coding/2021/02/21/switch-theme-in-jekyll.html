@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Switch theme in Jekyll | Alexander’s Blog</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Switch theme in Jekyll" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Switching a theme in Jekyll is straight forward." />
+<meta property="og:description" content="Switching a theme in Jekyll is straight forward." />
+<link rel="canonical" href="http://localhost:4000/blog/coding/2021/02/21/switch-theme-in-jekyll.html" />
+<meta property="og:url" content="http://localhost:4000/blog/coding/2021/02/21/switch-theme-in-jekyll.html" />
+<meta property="og:site_name" content="Alexander’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-21T13:24:59+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Switch theme in Jekyll" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Switch theme in Jekyll","dateModified":"2021-02-21T13:24:59+01:00","datePublished":"2021-02-21T13:24:59+01:00","url":"http://localhost:4000/blog/coding/2021/02/21/switch-theme-in-jekyll.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/coding/2021/02/21/switch-theme-in-jekyll.html"},"description":"Switching a theme in Jekyll is straight forward.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/blog/assets/css/style.css?v=14bea71328eb9466f07f4e5be37d88482811efd8">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/respond.js"></script>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" href="/blog/assets/css/ie.css">
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+<body>
+<div class="wrapper">
+
+  <section>
+    <div id="title">
+      <h1>Alexander's Blog</h1>
+      <p>Personal blog about coding stuff and more.
+</p>
+      <hr>
+    </div>
+
+    <p>Switching a theme in Jekyll is straight forward.</p>
+
+<h2 id="setup">Setup</h2>
+
+<ol>
+  <li>Add the theme to the Gemfile
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">gem "jekyll-theme-midnight"</code></li>
+    </ul>
+  </li>
+  <li>Execute <code class="language-plaintext highlighter-rouge">bundle install</code></li>
+  <li>Set the theme in the <em>_config.yml</em>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">theme: jekyll-theme-midnight</code></li>
+    </ul>
+  </li>
+  <li>Execute <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></li>
+</ol>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h4 id="theme-not-displayed">Theme not displayed</h4>
+
+<ul>
+  <li>Make sure, to remove the <em>default.html</em> in the <em>_layouts</em> folder. The file overrides the default layout from the
+installed theme.</li>
+  <li>Set the layout of your posts/pages according to your installed theme. For instance, the <em>midnight</em> theme does not have
+any post or page layout per default.</li>
+</ul>
+
+
+  </section>
+
+</div>
+
+
+</body>
+</html>
