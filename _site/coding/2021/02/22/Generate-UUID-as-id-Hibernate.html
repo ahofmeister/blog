@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Generate UUID as id column in Hibernate | Alexander’s Blog</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Generate UUID as id column in Hibernate" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Generate UUID as column type with Hibernate:" />
+<meta property="og:description" content="Generate UUID as column type with Hibernate:" />
+<link rel="canonical" href="http://localhost:4000/blog/coding/2021/02/22/Generate-UUID-as-id-Hibernate.html" />
+<meta property="og:url" content="http://localhost:4000/blog/coding/2021/02/22/Generate-UUID-as-id-Hibernate.html" />
+<meta property="og:site_name" content="Alexander’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-22T19:10:50+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Generate UUID as id column in Hibernate" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Generate UUID as id column in Hibernate","dateModified":"2021-02-22T19:10:50+01:00","datePublished":"2021-02-22T19:10:50+01:00","url":"http://localhost:4000/blog/coding/2021/02/22/Generate-UUID-as-id-Hibernate.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/coding/2021/02/22/Generate-UUID-as-id-Hibernate.html"},"description":"Generate UUID as column type with Hibernate:","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/blog/assets/css/style.css?v=a1980480078c5b405cbaf2d4a786612d9d49fab8">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/respond.js"></script>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" href="/blog/assets/css/ie.css">
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+<body>
+<div class="wrapper">
+
+  <section>
+    <div id="title">
+      <h1>Alexander's Blog</h1>
+      <p>Personal blog about coding stuff and more.
+</p>
+      <hr>
+    </div>
+
+    <p>Generate UUID as column type with Hibernate:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Id</span>
+<span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">generator</span> <span class="o">=</span> <span class="s">"UUID"</span><span class="o">)</span>
+<span class="nd">@GenericGenerator</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"UUID"</span><span class="o">,</span> <span class="n">strategy</span> <span class="o">=</span> <span class="s">"org.hibernate.id.UUIDGenerator"</span><span class="o">)</span>
+<span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"id"</span><span class="o">,</span> <span class="n">updatable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+<span class="kd">private</span> <span class="no">UUID</span> <span class="n">id</span><span class="o">;</span>
+</code></pre></div></div>
+<p>Add the code above to your entity.</p>
+
+
+
+  </section>
+
+</div>
+
+
+</body>
+</html>
