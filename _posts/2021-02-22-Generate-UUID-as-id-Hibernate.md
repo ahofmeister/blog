@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Generate UUID as id column in Hibernate"
 date:   21-02-22 19:10:50 +0100
 categories: coding
