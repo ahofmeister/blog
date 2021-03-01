@@ -16,10 +16,13 @@
   <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  <!-- Custom js and css -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
 </head>
 <body>
 <div class="wrapper">
-
   <section>
     <div id="title">
       <h1>{{ site.title | default: site.github.repository_name }}</h1>
