@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Add copy to clipboard function in Javascript | Alexander’s Blog</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Add copy to clipboard function in Javascript" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It is pretty cool to have syntax highlighting in HTML, Markdown or whatever. It is much cooler to be able to copy the code block per one click" />
+<meta property="og:description" content="It is pretty cool to have syntax highlighting in HTML, Markdown or whatever. It is much cooler to be able to copy the code block per one click" />
+<link rel="canonical" href="http://localhost:4000/blog/coding/2021/03/01/copy-to-clipboard-js.html" />
+<meta property="og:url" content="http://localhost:4000/blog/coding/2021/03/01/copy-to-clipboard-js.html" />
+<meta property="og:site_name" content="Alexander’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-01T19:42:35+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Add copy to clipboard function in Javascript" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Add copy to clipboard function in Javascript","dateModified":"2021-03-01T19:42:35+01:00","datePublished":"2021-03-01T19:42:35+01:00","url":"http://localhost:4000/blog/coding/2021/03/01/copy-to-clipboard-js.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/coding/2021/03/01/copy-to-clipboard-js.html"},"description":"It is pretty cool to have syntax highlighting in HTML, Markdown or whatever. It is much cooler to be able to copy the code block per one click","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/blog/assets/css/style.css?v=4adba9d742696d1bc6ec13e7204647e6f21dae8b">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/respond.js"></script>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" href="/blog/assets/css/ie.css">
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <!-- Custom js and css -->
+  <script src="/blog/assets/js/main.js"></script>
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+
+</head>
+<body>
+<div class="wrapper">
+  <section>
+    <div id="title">
+      <h1>Alexander's Blog</h1>
+      <p>Personal blog about coding stuff and more.
+</p>
+    </div>
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Add copy to clipboard function in Javascript</h1>
+        <p class="post-meta">
+            <time datetime="2021-03-01T19:42:35+01:00" itemprop="datePublished">Mar 1,
+                2021
+            </time>
+             |
+            
+            <span style="margin-right: 10px">javascript</span>
+            
+        <hr>
+        </p>
+
+    </header>
+    <ul>
+    </ul>
+    <div class="post-content" itemprop="articleBody">
+        <p>It is pretty cool to have syntax highlighting in HTML, Markdown or whatever. 
+It is much cooler to be able to copy the code block per one click</p>
+
+<p><i>The example adds a click listener to all code blocks on this blog. 
+Try it out by clicking on the code blocks below</i></p>
+
+<p>Add a click listener to the HTML element you want to copy from.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">code</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">pre.highlight</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">code</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setClipboard</span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">innerText</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>Add a copy function, to copy the value into the clipboard. 
+A temporary input is needed, in order to exec the copy command.
+The input will be deleted afterwards.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">function</span> <span class="nx">setClipboard</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">tempInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">input</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">tempInput</span><span class="p">.</span><span class="nx">style</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">position: absolute; left: -1000px; top: -1000px</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nx">tempInput</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tempInput</span><span class="p">);</span>
+    <span class="nx">tempInput</span><span class="p">.</span><span class="nx">select</span><span class="p">();</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="dl">"</span><span class="s2">copy</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">tempInput</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+
+    </div>
+
+</article>
+
+
+  </section>
+
+</div>
+
+
+</body>
+</html>

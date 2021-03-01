@@ -1,9 +1,9 @@
 window.onload = function () {
-    enableCopyCliboardForCodeBlocks();
+    enableCopyClipboardForCodeBlocks();
 }
 
 
-function enableCopyCliboardForCodeBlocks() {
+function enableCopyClipboardForCodeBlocks() {
     const code = document.querySelector('pre.highlight')
     code.addEventListener('click', (ev) => {
         setClipboard(ev.target.innerText)
